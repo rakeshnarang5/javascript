@@ -1,0 +1,36 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+h1 {
+    font-size: 1.5em;
+    /* it will pick up 12 px from above and set font-size for h1 as 1.5 times 12px */
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+
+/* javascript code for modifying the font-size of the page */
+
+// makeSizer function that returns a function that modifies the fontSize of document as per font-size passed
+var makeSizer=function(size) {
+    return function() {
+        document.body.style.fontSize=size+'px';
+    }
+}
+
+// calling makeSizer that returns a function that modifies fontSize to parameter passed
+var size12=makeSizer(12);
+var size14=makeSizer(14);
+var size16=makeSizer(16);
+
+// binding variables (that contain functions) to the anchor tags
+document.getElementById('size-12').onclick=size12;
+document.getElementById('size-14').onclick=size14;
+document.getElementById('size-16').onclick=size16;
+
+// 3 anchor tags with ids
+<href="#" id="size-12">12</a><href="#" id="size-14">14</a><href="#" id="size-16">16</a>
