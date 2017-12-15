@@ -1,0 +1,19 @@
+#appTitle {
+	text-align: center;
+}
+
+#taskTitle {
+	text-align: center;
+}
+
+#addTask {
+	text-align: center;
+}
+
+#taskTable {
+	text-align: center;
+}
+
+div {
+	padding: 10px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+
+    </style>
+    <script type="text/javascript">
+    var perCount = 29300 / 22 / 9 / 60
+    var count = 0;
+
+    var increment = function(value) {
+        count += value;
+        var label = document.getElementById("count");
+        label.innerHTML = "Minutes: " + (count % 60);
+        var valuePerCount = count * perCount;
+        var value_per_count = document.getElementById("value-per-count")
+        value_per_count.innerHTML = "Rs. " + valuePerCount
+        var count_in_hours = document.getElementById("count-in-hours")
+        count_in_hours.innerHTML = "Hours: " + (count / 60)
+        var total_days_worked = document.getElementById("total-days-worked")
+        total_days_worked.innerHTML = "Days worked: " + (count / 60 / 9)
+    }
+    </script>
+</head>
+
+<body>
+    <br>
+    <div>
+        <label id="count">0</label>
+    </div>
+    <br>
+    <div>
+        <label id="count-in-hours"></label>
+    </div>
+    <br>
+    <div>
+    	<label id="total-days-worked"></label>
+    </div>
+    <br>
+    <div id="container-button">
+        <button type="button" id="click-button" onclick="increment(1)">Add 1</button>
+        <button type="button" id="click-button" onclick="increment(10)">Add 10</button>
+        <button type="button" id="click-button" onclick="increment(60)">Add 60</button>
+        <button type="button" id="click-button" onclick="increment(-1)">Subtract 1</button>
+        <button type="button" id="click-button" onclick="increment(-10)">Subtract 10</button>
+        <button type="button" id="click-button" onclick="increment(-60)">Subtract 60</button>
+    </div>
+    <br>
+    <div>
+        <label id="value-per-count"></label>
+    </div>
+</body>
+
+</html>
